@@ -1,14 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 :root{
-    --pagination-container-background:linear-gradient(135deg #8C267B #3F04BF);
-    --header-font-family: "Hyperlegible", "Mono", "Atkison";
+    --pagination-container-background:linear-gradient(135deg ,#8C267B, #3F04BF);
+    --header-font-family:"Atkinson Hyperlegible Mono", sans-serif;
     --header-font-size:1.5rem;
     --letter-spacing:0.25rem;
     --indicator-div-color:#f2f2f2;
     --indicator-font-color:#353440;
     --previous-button-background:#3F7373;
-    --previous-hover-background:#42708C;
+    --previous-hover-background:#247aaf;
     --next-btn-background:#48BF36;
     --next-btn-background-hover:#49F273;
-
+    --content-area-background:#20735B;
+    --box-shadow: 0px 5px 18px #BF4417;
+    --box-contents-shadow:0px 5px 13px #0F41A6;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background:var(--pagination-container-background);
+    height:100%;
+    width:100%;
+}
+.project{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.titles h3{
+   font-family: var(--header-font-family);
+   font-size:1.2rem;
+   padding:1rem;
+   color: aliceblue;
+}
+.content{
+    height:84vh;
+    width:90%;
+    display:grid;
+    grid-template-columns:auto;
+    grid-gap:.8rem;
+    padding:.7rem;
+    background-color:#40e469;
+    border-radius:.3rem;
+    box-shadow:var(--box-shadow);
+}
+.content-pagination{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+}
+.pagination{
+    margin-top: 1rem;
+    width:70%;
+    padding:1rem;
+    border-radius:.25rem;
+    background-color: aliceblue;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:1rem;
+}
+.count{
+    display: flex;
+    gap:3rem;
+    list-style-type:none;
+    color:var(--indicator-font-color);
+    padding:1rem;
+}
+.previous-btn{
+    background-color:var(--previous-button-background);
+    border:none;
+    padding:.5rem;
+    border-radius:.2rem;
+    color:#f2f2f2;
+    letter-spacing:.1rem;
+    font-size:1rem;
+    &:hover{
+        background-color:var(--previous-hover-background);
+        transform:translateY(-.1rem);
+        transition: background-color .3s linear,
+        transform .2s linear;
+    }
 }
