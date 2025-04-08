@@ -9,7 +9,7 @@
     --previous-button-background:#3F7373;
     --previous-hover-background:#247aaf;
     --next-btn-background:#48BF36;
-    --next-btn-background-hover:#49F273;
+    --next-btn-background-hover:#2ac952;
     --content-area-background:#20735B;
     --box-shadow: 0px 5px 18px #BF4417;
     --box-contents-shadow:0px 5px 13px #0F41A6;
@@ -56,18 +56,18 @@ body{
 }
 .pagination{
     margin-top: 1rem;
-    width:70%;
+    width:90%;
     padding:1rem;
     border-radius:.25rem;
     background-color: aliceblue;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-bottom:1rem;
 }
 .count{
     display: flex;
-    gap:3rem;
+    gap:2.8rem;
     list-style-type:none;
     color:var(--indicator-font-color);
     padding:1rem;
@@ -82,8 +82,27 @@ body{
     font-size:1rem;
     &:hover{
         background-color:var(--previous-hover-background);
-        transform:translateY(-.1rem);
+        transform:translateY(-.3rem);
         transition: background-color .3s linear,
         transform .2s linear;
     }
+}
+.next-btn{
+    background-color:var(--next-btn-background);
+    border:none;
+    padding:.5rem;
+    border-radius:.2rem;
+    color:#f2f2f2;
+    letter-spacing:.1rem;
+    font-size:1rem;
+    &:hover{
+        background-color:var(--next-btn-background-hover);
+        transform:translateY(-.3rem);
+        transition: background-color .3s linear,
+        transform .2s linear;
+    }
+}
+li{
+    border-radius:50%;
+    padding:.7rem;
 }
