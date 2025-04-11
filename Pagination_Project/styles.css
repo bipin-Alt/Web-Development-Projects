@@ -40,12 +40,19 @@ body{
     height:84vh;
     width:90%;
     display:grid;
-    grid-template-columns:auto;
+    grid-template-columns:1fr 1fr;
     grid-gap:.8rem;
     padding:.7rem;
     background-color:#40e469;
     border-radius:.3rem;
     box-shadow:var(--box-shadow);
+}
+.content div{
+    background-color: #f1f1f1;
+    border: 1px solid #070707;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
 }
 .content-pagination{
     width:100%;
@@ -105,4 +112,14 @@ body{
 li{
     border-radius:50%;
     padding:.7rem;
+}
+.count li.active{
+    background-color: #20735B;
+    color: #f6f7f6;
+    font-weight:700;
+    border-radius:50%;
+}
+.count li:hover:not(.active){
+    background-color:#bebebe;
+    transition:background-color .2s linear;
 }
