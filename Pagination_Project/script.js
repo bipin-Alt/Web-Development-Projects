@@ -33,9 +33,9 @@ const toNextFunction =()=>{
     const paginationCount = document.querySelectorAll("li");
     const paginationCountArray =[...paginationCount];
     for(let i=0;i<paginationCountArray.length;i++){
-        if(paginationCountArray[i].classList.contains("active")){
+        if(paginationCountArray[i].classList.contains("active") && i<5){
             paginationCountArray[i].classList.remove("active");
-            paginationCountArray[].classList.add("active");
+            paginationCountArray[i+=1].classList.add("active");
         }
     }
 }
