@@ -39,6 +39,17 @@ const toNextFunction =()=>{
         }
     }
 }
-
+//previous button functionality//
+const prevBtnFunction = ()=>{
+    const paginationCount= document.querySelectorAll("li");
+    const paginationCountArray =[...paginationCount];
+    for(let i=0;i<paginationCountArray.length;i++){
+        if(paginationCountArray[i].classList.contains("active")&& i>0){
+            paginationCountArray[i].classList.remove("active");
+            paginationCountArray[i-=1].classList.add("active");
+        }
+    }
+};
 //event listener to the next btn//
 nextBtn.addEventListener("click",toNextFunction);
+prevBtn.addEventListener("click", prevBtnFunction);
