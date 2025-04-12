@@ -29,6 +29,28 @@ const contentObj = [
     }
 ];
 
+//function to display csontents//
+const display = ()=>{
+    const paginationCountArray = [...document.querySelectorAll("li")];
+    const contentContainer = document.querySelector(".content");
+    for(let i=0;i<paginationCountArray.length;i++){
+        switch(i<5 && i>=0){
+            case i===1:{
+              contentContainer.innerHTML=`
+              <div>${contentObj[0].content}</div>
+              <div>${contentObj[1].content}</div>
+              <div>${contentObj[2].content}</div>
+              <div>${contentObj[3].content}</div>`
+            };
+           case i===2:{
+            contentContainer.innerHTML =`
+            <div>${contentObj[4].content}</div>`
+           }
+        }
+    }
+   
+};
+
 const toNextFunction =()=>{
     const paginationCount = document.querySelectorAll("li");
     const paginationCountArray =[...paginationCount];
@@ -36,8 +58,9 @@ const toNextFunction =()=>{
         if(paginationCountArray[i].classList.contains("active") && i<5){
             paginationCountArray[i].classList.remove("active");
             paginationCountArray[i+=1].classList.add("active");
-        }
-    }
+        };
+    };
+    display();
 }
 //previous button functionality//
 const prevBtnFunction = ()=>{
@@ -49,6 +72,7 @@ const prevBtnFunction = ()=>{
             paginationCountArray[i-=1].classList.add("active");
         }
     }
+    display();
 };
 //event listener to the next btn//
 nextBtn.addEventListener("click",toNextFunction);

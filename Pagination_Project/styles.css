@@ -50,8 +50,8 @@ body{
 .content div{
     background-color: #f1f1f1;
     border: 1px solid #070707;
-    padding: 10px;
-    font-size: 30px;
+    padding:1rem;
+    font-size:1rem;
     text-align: center;
 }
 .content-pagination{
