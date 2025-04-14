@@ -1,0 +1,93 @@
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Main container */
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    max-width: 60rem;
+    width: 100%;
+}
+
+/* Title */
+.titles h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+    letter-spacing:.1rem;
+}
+
+/* Body layout */
+.body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a {
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+.social-icons a:hover {
+    color: #0077ff;
+    transform: translateY(-0.3rem);
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 119, 255, 0.4);
+}
+
+/* Image container */
+.my-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Responsive Image with animation */
+.image {
+    width: 40vw;
+    max-width: 15rem;
+    height: auto;
+    mix-blend-mode: multiply;
+    filter:contrast(1);
+    border-radius: 1.2rem;
+    box-shadow: 0 0.8rem 1.5rem rgba(16, 112, 221, 0.589);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(12, 109, 236, 0.658);
+}
