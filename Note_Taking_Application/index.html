@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Note Taking Application</title>
+    <!--Styling-->
+    <link rel="stylesheet" href="styles.css">
+    <!--Font awesome -->
+    <script src="https://kit.fontawesome.com/594ea8a3ff.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!--Note taking application -->
     <section class="app-container">
         <header class="navbar-titles">
             <nav class="navigation">
@@ -15,10 +20,70 @@
                     <a class="take-notes">Take Notes</a>
                     <a class="my-notes">My Notes</a>
                     <a class="create-acc"><button class="create">Create Account</button></a>
-                    <a class="log-in"><button class="login">Login</button></a>
+                    <a class="log-in"><button class="login"><i class="fa-solid fa-right-to-bracket"></i></button></a>
+                    <div class="menu-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                      </div>                      
                 </div>
             </nav>
         </header>
+        <main class="body">
+          <div class="titles">
+            <p class="title">World's #1 Note Taking Application for Students</p>
+            <p class="desc">Use our application to make notes and score higher in your next exam.</p>
+            <button class="get-started"><i class="fa-solid fa-arrow-right"></i>Get Started</button>
+            <div class="notes-image">
+                <img class="note-taking" src="Notes-taking-img.jpg" alt="application preview">
+            </div>
+          </div>
+          <div class="usages">
+              <p class="benefits">Equiping 5000000+ Students with best resources in 40+ countries</p>
+              <p class="student-review">Students report that CodeAlt-Notes Helps them</p>
+              <div class="stats-container">
+                <div class="stats">
+                    <div class="engage number" >0%</div>
+                    <div class="description">Feel more engaged in the classroom.</div>
+                </div>
+                <div class="stats">
+                    <div class="results number">0%</div>
+                    <div class="description">Achieved better results</div>
+                </div>
+                <div class="stats">
+                    <div class="organized number">0%</div>
+                    <div class="description">Stay better organized</div>
+                </div>
+              </div>
+              <div class="reviews-ratings">
+                  <div class="first">
+                    <p><strong> Sophia Gomez</strong> </p>
+                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+                    <p>"Before using <strong>CodeAlt-Notes</strong>, my study routine was a complete mess. I'd lose notes, forget what to revise, and feel overwhelmed before exams. But now? Everything's in one place — I feel organized, focused, and actually excited to study! <strong>Scored my highest marks ever last semester.</strong> Can't recommend this app enough!"</p>
+                  </div>
+                  <div class="first">
+                    <p><strong>Anish Thapa</strong></p>
+                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                    <p> "I used to carry multiple notebooks and still forget what to study. With <strong>CodeAlt-Notes</strong>, I’ve gone fully digital — my notes are organized, searchable, and accessible from anywhere. The design is simple but powerful. It’s like having a personal study assistant in my pocket!"</p>
+                  </div>
+                  <div class="first">
+                    <p><strong>Xin chan cho</strong></p>
+                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+                    <p> "As someone who always struggled to keep my notes in one place, <strong>CodeAlt-Notes</strong> was a total game-changer. I love the clean interface, and the fact that I can quickly jot down ideas during class and organize them later is a blessing. Honestly, I can't imagine studying without it anymore!"</p>
+                  </div>
+              </div>
+          </div>
+        </main>
+        <footer class="footer">
+            <div class="underline"></div>
+            <p>© 2025 CodeAlt Software Company PVD LTD</p>
+             <p>All rights are Reserved</p>
+             <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+             </div>
+        </footer>
     </section>
+<!--Script-->
+<script src="script.js"></script>
 </body>
 </html>
