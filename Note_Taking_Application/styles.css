@@ -53,6 +53,7 @@
        gap: 1rem;
  }
   .nav-buttons a {
+        color: #d8d8d8;
        text-decoration: none;
        font-weight: 500;
        transition: var(--transition);
@@ -104,7 +105,7 @@
     font-size:1.3rem;
     animation: twinkle 1.5s infinite ease-in-out;
     cursor: pointer;
-    display:none;
+    visibility: hidden;
 }
 @keyframes twinkle {
     0%, 100% {
@@ -276,9 +277,6 @@
     }
     .stats {
       width: 90%;
-    }
-    .fa-bars{
-        display: block;
     }
   }
 
