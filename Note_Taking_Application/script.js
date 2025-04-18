@@ -26,4 +26,28 @@ const showStats = ()=>{
   });
 }
 window.addEventListener("scroll",showStats);
-window.addEventListener("load",showStats)
+window.addEventListener("load",showStats);
+
+//function to animate the stats//
+const animateData = ()=>{
+     const counters = document.querySelectorAll(".number");
+     const speed = 250;
+     
+     counters.forEach(counter =>{
+           const target = +counter.getAttribute("data-target");
+          let count = 0;
+
+          const updateCount = ()=>{
+            const increment = target/speed;
+            if(count<target){
+              count +=increment;
+              counter.innerText =`${Math.ceil(count)}%`
+              setTimeout(updateCount,15);
+            }else{
+              counter.innerText = `${target}%`;
+            }
+          };
+
+     });
+}
+
