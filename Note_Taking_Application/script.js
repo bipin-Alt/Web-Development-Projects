@@ -6,12 +6,13 @@ menuIcon.addEventListener("click", ()=>{
   document.querySelector(".nav-buttons").style.display = "block";
   menuIcon.style.display ="none";
   document.querySelector(".close-menu").style.display ="block";
+  document.querySelector(".menu-toggle").style.display ="none";
 })
 crossIcon.addEventListener("click", ()=>{
   document.querySelector(".nav-buttons").style.display ="none";
   menuIcon.style.display ="block";
   document.querySelector(".menu-toggle").style.display ="block";
-  document.querySelector(".close-menu").style.display ="none";
+  document.querySelector(".close-menu").style.display="none";
 })
 
 //function for showing the stats//
@@ -31,7 +32,7 @@ window.addEventListener("load",showStats);
 //function to animate the stats//
 const animateData = ()=>{
      const counters = document.querySelectorAll(".number");
-     const speed = 250;
+     const speed = 200;
      
      counters.forEach(counter =>{
            const target = +counter.getAttribute("data-target");
@@ -47,7 +48,14 @@ const animateData = ()=>{
               counter.innerText = `${target}%`;
             }
           };
-
+          const observer = new IntersectionObserver((entries)=>{
+              if(entries[0].isIntersecting){
+                updateCount();
+                observer.unobserve(counter);
+              }
+          }, {threshold:1});
+          observer.observe(counter);
      });
 }
-
+//event listener to the window to show animation when user loads and scrolls to it//
+window.addEventListener("load", animateData);
