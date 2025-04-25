@@ -1,61 +1,149 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
-body{
-  background-color:#f2f3f3;
-  height:100vh;
-  width:100%;
-}
+/* style.css */
 
-.box-container{
-    height:100%;
-    width:100%;
-    max-width:1170px;
-    margin-top:5rem;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-}
-.head p{
-    font-weight: 700;
-    font-size: 1.6rem;
-    color: rgb(105, 69, 21);
-    letter-spacing:.12rem;
+/* Root Variables */
+:root {
+    --bg-color: #f4f4f9;
+    --box-bg: #ffffff;
+    --primary-color: #2d2dff;
+    --exit-color: #e63946;
+    --stay-color: #2a9d8f;
+    --text-color: #333;
+    --overlay-color: rgba(0, 0, 0, 0.6);
+    --border-radius: 12px;
+    --transition-speed: 0.3s;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Base Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.main{
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin-top:1rem;
-    padding: 1.5rem;
-    box-shadow:0px 5px 15px#f2f4f444;
-    box-shadow: 0px 5px 15px rgb(153, 31, 224);
-}
-.main p{
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-.Exit{
-    font-size: 1.1rem;
-    padding:.5rem;
-    margin-top: .4rem;
-    width:50%;
-    outline: none;
-    cursor: pointer;
+    justify-content: center;
+  }
+  
+  /* Box Container */
+  .box-container {
+    background-color: var(--box-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    width: 320px;
+    position: relative;
+  }
+  
+  /* Header Title */
+  .head .title {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Main Content */
+  .main p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .Exit {
+    background-color: var(--exit-color);
+    color: #fff;
+    padding: 0.5rem 1.2rem;
     border: none;
-    background-color:#c00c24;
-    color:#f5ececce;
-    letter-spacing:.2rem;
-    transition: all .2s linear;
-    border-radius: .2rem;
-}
-.Exit:hover{
-        background-color: #8f0000;
-        transform: translateX(-1rem);
-        transition:transform .3s ease-in-out;
-}
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color var(--transition-speed);
+  }
+  
+  .Exit:hover {
+    background-color: #c53030;
+  }
+  
+  /* Pop-Up Overlay */
+  .pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-speed);
+  }
+  
+  /* Visible Pop-Up */
+  .pop-up.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Pop-Up Box */
+  .pop-upBox {
+    background-color: var(--box-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transform: scale(0.7);
+    animation: popupAnimation 0.3s ease-in-out forwards;
+  }
+  
+  .pop-upBox p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* Buttons inside pop-up */
+  .yes,
+  .no {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: background-color var(--transition-speed);
+  }
+  
+  .yes {
+    background-color: var(--exit-color);
+    color: #fff;
+  }
+  
+  .no {
+    background-color: var(--stay-color);
+    color: #fff;
+  }
+  
+  .yes:hover {
+    background-color: #c53030;
+  }
+  
+  .no:hover {
+    background-color: #21867a;
+  }
+  
+  /* Pop-Up Animation */
+  @keyframes popupAnimation {
+    to {
+      transform: scale(1);
+    }
+  }
+  
 
